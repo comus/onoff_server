@@ -296,6 +296,9 @@ void example_ble_mesh_generic_server_cb(esp_ble_mesh_generic_server_cb_event_t e
         if (param->ctx.recv_op == ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET ||
             param->ctx.recv_op == ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET_UNACK) {
             ESP_LOGI(TAG, "onoff 0x%02x", param->value.state_change.onoff_set.onoff);
+            char str[30];
+            sprintf(str, "ttl: %d, rssi: %d", param->ctx.recv_ttl, param->ctx.recv_rssi);
+            logger(str, PURPLE);
             example_change_led_state(param->model, &param->ctx, param->value.state_change.onoff_set.onoff);
         }
         break;
