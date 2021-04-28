@@ -1,0 +1,19 @@
+{
+  "C_Cpp.clang_format_style": "Visual Studio",
+  "editor.formatOnSave": false,
+  "[cpp]": {
+    "editor.quickSuggestions": true
+  },
+  "[c]": {
+    "editor.quickSuggestions": true
+  },
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "idf.port": "/dev/cu.usbserial-1430",
+  "files.associations": {
+    "*.inc": "c",
+    "board.h": "c",
+    "sstream": "c",
+    "*.ipp": "c",
+    "ili9340.h": "c"
+  }
+}
